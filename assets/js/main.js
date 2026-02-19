@@ -26,18 +26,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Enhanced Intersection Observer with Stagger
+const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+};
+
 const revealOnScroll = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            // Add a small delay for child items to create a staggered effect
+            const delay = entry.target.dataset.delay || 0;
             setTimeout(() => {
                 entry.target.classList.add('revealed');
-            }, entry.target.dataset.delay || 0);
+            }, delay);
             revealOnScroll.unobserve(entry.target);
         }
     });
-}, { threshold: 0.15 });
+}, observerOptions);
 
 document.querySelectorAll('.service-card, .why-choose-us, .contact-info, .fade-up, .section-header, .reveal, .footer-col').forEach((el, i) => {
     // Optionally add a delay based on index for grid items
