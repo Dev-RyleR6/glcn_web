@@ -139,3 +139,18 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+// Mobile Dropdown Toggle
+const mobileDropdownTrigger = document.querySelector('.mobile-dropdown-trigger');
+const mobileSubmenu = document.querySelector('.mobile-submenu');
+
+if (mobileDropdownTrigger) {
+    mobileDropdownTrigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileSubmenu.classList.toggle('active');
+        const icon = mobileDropdownTrigger.querySelector('i');
+        if (icon) {
+            icon.style.transform = mobileSubmenu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+    });
+}
