@@ -39,9 +39,9 @@ const revealOnScroll = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.service-card, .why-choose-us, .contact-info, .fade-up').forEach((el, i) => {
+document.querySelectorAll('.service-card, .why-choose-us, .contact-info, .fade-up, .section-header, .reveal, .footer-col').forEach((el, i) => {
     // Optionally add a delay based on index for grid items
-    if (el.classList.contains('service-card')) {
+    if (el.classList.contains('service-card') || el.classList.contains('footer-col')) {
         el.dataset.delay = (i % 3) * 100; // Stagger by 100ms
     }
     revealOnScroll.observe(el);
