@@ -32,7 +32,7 @@
     <header id="main-header">
         <nav class="container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="GLCN Construction Logo" class="brand-logo">
+                <img src="assets/logo/glcn_logo.png" alt="GLCN Construction Logo" class="brand-logo">
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -40,12 +40,35 @@
                 <li><a href="#about">Why Choose Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="header-actions">
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="assets/logo/glcn_logo.png" alt="Logo" class="brand-logo-sm">
+                <div class="close-menu" id="close-menu"><i class="fas fa-times"></i></div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <p>glcnconstruction@gmail.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -64,7 +87,9 @@
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <div class="text-center">
+                    <h2 class="section-title">Our Services</h2>
+                </div>
                 <div class="services-grid">
                     <div class="service-card fade-up">
                         <i class="fas fa-pencil-ruler"></i>
@@ -147,8 +172,34 @@
                     </ul>
                 </div>
                 <div class="image-right fade-in">
-                    <!-- Placeholder for generated image -->
-                    <div class="img-placeholder" id="about-image"></div>
+                    <div class="carousel" id="why-choose-us-carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"
+                                style="background-image: url('assets/images/projects/image.png')"></div>
+                            <div class="carousel-item"
+                                style="background-image: url('assets/images/projects/image2.png')"></div>
+                            <div class="carousel-item"
+                                style="background-image: url('assets/images/projects/image copy.png')"></div>
+                            <div class="carousel-item"
+                                style="background-image: url('assets/images/projects/image copy 2.png')"></div>
+                            <div class="carousel-item"
+                                style="background-image: url('assets/images/projects/image copy 3.png')"></div>
+                            <div class="carousel-item"
+                                style="background-image: url('assets/images/projects/image copy 4.png')"></div>
+                        </div>
+                        <button class="carousel-control prev" id="carousel-prev"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-control next" id="carousel-next"><i
+                                class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                            <span class="indicator" data-index="3"></span>
+                            <span class="indicator" data-index="4"></span>
+                            <span class="indicator" data-index="5"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,7 +207,9 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
+                <div class="text-center">
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Contact Information</h3>
